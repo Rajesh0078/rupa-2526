@@ -1798,6 +1798,22 @@
       }
     </style>
     <style>
+      #enter {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(15px);
+        transition: all 1s ease;
+      }
+
+      #enter.ready {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+    </style>
+    <style>
       /* Night sky + lanterns */
       .sky {
         position: relative;
@@ -2225,8 +2241,8 @@
     <canvas id="conf" class="cv"></canvas>
 
     <section class="gate" id="gate">
-      <span class="eyebrow">A little world, made for Rupa Likitha</span>
-      <h1 id="gh">Your day is Almost Here...!</h1>
+      <span class="eyebrow">A little world, made for Rupa Likita</span>
+      <h1 id="gh">Your Day Is Almost Here...!</h1>
       <p class="sub">
         A little world of surprises has been created just for you. ❤️
       </p>
@@ -2237,9 +2253,7 @@
         <div><b id="cd-s">00</b><span>Seconds</span></div>
       </div>
       <p class="when">24 November 2026 &middot; 12:00 AM IST</p>
-      <h class="btn1" id="enter" type="button">
-        <!-- Enter Your Little World ❤️ -->
-      </h>
+      <h class="btn" id="enter" type="button"> Enter Your Little World ❤️ </h>
     </section>
 
     <main class="world" id="world" hidden>
@@ -2248,7 +2262,7 @@
         <div class="balloons" id="balloons"></div>
         <div class="wrap">
           <span class="eyebrow">24 November &middot; Turning 26</span>
-          <h1>HAPPY BIRTHDAY, RUPA LIKITHA! ❤️</h1>
+          <h1>HAPPY BIRTHDAY, RUPA LIKITA! ❤️</h1>
           <div class="age" role="img" aria-label="25 to 26">
             <span class="a1">25</span><span class="ar">&rarr;</span
             ><span class="a2">26</span>
@@ -2463,14 +2477,6 @@
               autocomplete="off"
             />
             <button class="btn" type="submit">Send it to the stars</button>
-            <a
-              class="btn ghost"
-              id="share"
-              target="_blank"
-              rel="noopener"
-              hidden
-              >Send this wish as a message</a
-            >
           </form>
           <p class="tap more" id="more">
             Keep scrolling, more surprises await ↓
@@ -2482,7 +2488,7 @@
         <div class="wrap">
           <div class="head">
             <span class="eyebrow">Written in the stars</span>
-            <h2>A Sky Made for Rupa Likitha</h2>
+            <h2>A Sky Made for You</h2>
             <p>
               Touch the stars and watch them scatter. Tap a lantern to read its
               wish.
@@ -2491,7 +2497,7 @@
           <div class="sky" id="skybox">
             <canvas
               id="skyc"
-              aria-label="The name Rupa Likitha written in twinkling stars"
+              aria-label="The name Rupa Likita written in twinkling stars"
               role="img"
             ></canvas>
             <div class="lants" id="lants"></div>
@@ -2512,7 +2518,7 @@
           <div class="head">
             <span class="eyebrow">A scientific experiment</span>
             <h2>How Much Do I Love You?</h2>
-            <p>Press and hold the button, Rupa Likitha. Let's find out.</p>
+            <p>Press and hold the button, Rupa Likita. Let's find out.</p>
           </div>
           <svg class="lh" id="lh" viewBox="0 0 24 24" aria-hidden="true">
             <use href="#hrt" fill="#d9b45f" />
@@ -2718,11 +2724,8 @@
             Every little detail, every word, every surprise... all because you
             are special to me.
           </p>
-          <div class="end">Happy Birthday, Rupa Likitha. ❤️</div>
+          <div class="end">Happy Birthday, Rupa Likita. ❤️</div>
           <div class="acts">
-            <a class="btn" id="thx" target="_blank" rel="noopener"
-              >Send a thank-you message</a
-            >
             <button class="btn ghost" id="replay" type="button">
               Replay the surprise
             </button>
@@ -2777,31 +2780,31 @@
       var CONFIG = {
         wish: "May the year you turn 26 bring you everything your heart has been wishing for.",
         reasons: [
-          "The way you laugh at your own jokes before you finish them.",
-          "You make every ordinary day feel a little brighter.",
-          "Your kindness shows up even when nobody is watching.",
-          "You listen like what I say matters, because to you it does.",
-          "Your smile can fix my whole day.",
-          "You are brave in ways you never give yourself credit for.",
-          "Home feels like wherever you are.",
-          "You turn small moments into memories.",
-          "You believe in me when I forget to.",
-          "Simply because you are you.",
-          "Your voice is my favourite sound in the whole world.",
-          "You care so deeply, and it shows in the smallest things.",
-          "Even your silence feels comforting to me.",
-          "You make me want to be a better person.",
-          "The way your eyes light up when you talk about things you love.",
-          "You are strong even on the days you feel tired.",
-          "Your hugs feel like a safe little world.",
-          "You remember the tiny things that matter.",
-          "You can turn my worst mood around with one look.",
-          "You are beautiful inside and out, Rupa Likitha.",
-          "With you, even waiting feels sweet.",
-          "You never give up on the people you love.",
-          "Your laughter is contagious, and I hope it never stops.",
-          "You make my dreams feel possible.",
-          "You are my peace, my joy and my favourite person.",
+          "Nee navvu chusthe chaalu, naa mood automatic ga set ayipoddhi!",
+          "Nuvvu kopamga unna kuda cute gaane untav, adhi ela possible? 😂",
+          "Nee voice vinte chaalu, phone cut cheyyalanipinchadhu.",
+          "Nuvvu naa life lo vachina best love coach! ❤️",
+          "Nuvvu navvithe chaalu, naaku inka em akkarledhu.",
+          "Nuvvu cute koppdathav ga nijamgaaney cute vuntadhi.",
+          "Nuvvu thittina kuda vini enjoy chestha, ento naa karma! 😂",
+          "Nuvvu pakkana unte time ela aipothundho teliyadhu.",
+          "Ninnu chusthey Andhamey asuya padela vundhi anukuntaaru. kaani adhi nijam kaadhu, asuya padatam kaadhu Chachipoddhi adhi!",
+          "Nuvvu lekunda roju gadavatam chala kastam ga vundhi.",
+          "Nee messages kosam phone check cheyyadam naa daily duty.",
+          "Nuvvu naa favourite headache vi! 😜",
+          "Neetho matladithuntey time eh theliyadhu.",
+          "Nuvvu edhaina chepthe bore feel avvanu!",
+          "Nee smile kosam enni pulihora dialogues aina cheptha.",
+          "Nuvvu naatho unte ordinary days kuda special.",
+          "Nee mood swings ki adjust avvadam lo PhD chesthunna! 😂",
+          "Nuvvu chinna chinna vishayalu kuda gurthupettukuntav.",
+          "Nuvvu naaku girlfriend maatrame kaadhu, best friend kuda.",
+          "Nee tho godava padatam kuda oka cute memory eh.",
+          "Nuvvu happy ga unte naaku anthe chaalu.",
+          "Nuvvu naa favourite person, no replacement available!",
+          "Nee kallalo chusthe inka em maatladalo marchipotha.",
+          "Nuvvu naa life lo undadam naa biggest luck.",
+          "Inni reasons endhuku? Nuvvu nuvve kabatti love chesthunna! ❤️",
         ],
         replyNumber:
           "" /* optional: her number or yours with country code, digits only, e.g. 919876543210 */,
@@ -2811,11 +2814,11 @@
           url: "" /* optional: https link for a "Redeem now" button */,
           title: "Happy 26th Birthday",
           tagline: "From 25 to 26",
-          brand: "[BRAND NAME]",
+          brand: "AMAZON",
           amount: "₹2526",
-          code: "[GIFT CARD CODE]",
-          instructions: "[INSTRUCTIONS]",
-          expiry: "[EXPIRY DATE]",
+          code: "KU4Y-HVVXFP-DRK4",
+          instructions: "Call me pillaa! Nenu Cheptha...",
+          expiry: "One year vuntadhi le...!",
           note: "This is just a little something to make you smile. You deserve all the beautiful things in this world.",
           sign: "Happy Birthday, my love. ❤️",
         },
@@ -3134,6 +3137,9 @@
           setCd("cd-h", Math.floor((s % 86400) / 3600));
           setCd("cd-m", Math.floor((s % 3600) / 60));
           setCd("cd-s", s % 60);
+          if (d === 0) {
+            $("enter").classList.add("ready");
+          }
         }
 
         /* ---------- Night sky with name in stars + lanterns ---------- */
@@ -3149,14 +3155,14 @@
             vis = false,
             built = false;
           var LW = [
-            "I love how your smile lights up the room",
-            "You are my favourite hello",
-            "May every wish you make come true",
-            "You make my world softer and brighter",
-            "Here is to a year as lovely as you",
-            "You are magic, never forget it",
-            "My heart smiles whenever it thinks of you",
-            "Stay as wonderful as you are",
+            "Nee navvu konchem control cheyyi... Already padessav ga! 😂❤️",
+            "Nuvvey naa favourite notification vi! 🥰",
+            "Overthink cheyyaku madam, nenu unna ga! ❤️",
+            "Nee lanti piece okkate untundhi! 😂",
+            "Cake kanna nuvve sweet... kaani Chaala hot! 😜",
+            "Nuvvu navvuthu unte chaalu, naa day set! ❤️",
+            "Konchem thakkuva cute ga undochu kadha? Thattukolekapothunnam!",
+            "Eppudu ilane happy ga undu, deal aa? 🫶",
           ];
           function build() {
             var box = cv.parentNode.getBoundingClientRect();
@@ -3168,7 +3174,7 @@
             cv.height = h * d;
             cx.setTransform(d, 0, 0, d, 0, 0);
             var two = w < 560,
-              L = two ? ["Rupa", "Likitha"] : ["Rupa Likitha"];
+              L = two ? ["Rupa", "Likita"] : ["Rupa Likita"];
             var fs = Math.min(
               two ? w / 3.4 : w / 5.6,
               150,
@@ -3515,7 +3521,7 @@
           bdayOn = true;
           buildBday();
           document.body.classList.add("is-bday");
-          $("gh").textContent = "Rupa Likitha, The Day Is Here...";
+          $("gh").textContent = "Rupa Likita, The Day Is Here...";
           $("enter").textContent = "Enter Your Little World ❤️";
           if (!$("world").hidden) {
             document
@@ -3574,9 +3580,9 @@
           sh.hidden = false;
           toast("Your wish is among the stars");
         });
-        $("thx").href = waLink(
-          CONFIG.thanks || "Thank you for my birthday surprise.",
-        );
+        // $("thx").href = waLink(
+        //   CONFIG.thanks || "Thank you for my birthday surprise.",
+        // );
         $("replay").addEventListener("click", function () {
           location.reload();
         });
@@ -3732,18 +3738,16 @@
         /* ---------- Fortune orb ---------- */
         (function () {
           var F = [
-            "A trip you have been dreaming of is closer than you think.",
-            "Someone will say something this year that makes your whole week.",
-            "Your biggest wish is already on its way to you.",
-            "26 will be the year you are proudest of yourself.",
-            "A tiny surprise is hiding in your very near future.",
-            "You will laugh so hard this year that you forget why.",
-            "Doors you have knocked on will finally open.",
-            "The stars say: more dessert, more dancing, more joy.",
-            "Someone is thinking of you right now, and smiling.",
-            "This year, your smile will change somebody's day.",
-            "Everything you have worked for is about to bloom.",
-            "You are going to be loved beautifully, all year long.",
+            "Prediction: Ee year antha kuda nannu bharisthav... escape avvalevu! 😂❤️",
+            "26 lo nee smile ki reason nene avutha ani naa feeling! ❤️",
+            "Oka surprise waiting lo undhi... hint: ninnu chaala love chese vaadi nunchi! 🎁",
+            "Ee year mana memories ki count undakudadhu, storage maatram full ayipovali! 😂",
+            "Nee korikalu anni neraverali... andulo nenu kuda undali! 🥹",
+            "Coming days lo chaala navvulu, konni cute fights, inka ekkuva hugs!",
+            "Stars chepthunnayi: nuvvu queen vi, nenu nee permanent servant ni! 😂👑",
+            "Someone is thinking about you right now... sare le, adhi neneley! ❤️",
+            "Ee year nee dreams anni nijam avvali. Prathi step lo nenu nee pakkana undali vuntanu kuda.",
+            "Breaking news: Oka person ninnu 26 lo kuda, 100 years varaku kuda love chesthune untadu! ❤️",
           ];
           var i = Math.floor(Math.random() * F.length),
             o = $("orb"),
@@ -3769,19 +3773,15 @@
           var OW = [
             {
               label: "Open when you miss me",
-              text: "Close your eyes and take a deep breath. I am right there with you, in every thought and every smile. Distance is only a number, and my heart is always yours.",
+              text: "Peddhaga aalochinchaku madam... nee call kosam phone pattukoni mari wait chesthu unta. Call cheyyakapothe, nene chesestha! Ninnu miss avvadam naaku kuda alavate ayipoyindhi. ❤️",
             },
             {
               label: "Open when you need a smile",
-              text: "Remember the last time you laughed so hard you couldn't stop? That is the version of you I adore. Now smile, because I am smiling too, just thinking of you.",
+              text: "Ayyooo, endhuku ala moham pettesav? Oka chinna smile ivvochu kadha! Nee navvu chusthe chaalu naa problems anni paaripothay. So please, ippudu oka cute smile ivvu... yes, adhe! 😘",
             },
             {
               label: "Open when you feel low",
-              text: "You are stronger than you know and loved more than you realise. Bad days pass, but you are my forever. Rest, breathe, and lean on me.",
-            },
-            {
-              label: "Open when you can't sleep",
-              text: "Count the stars instead of sheep, and know that one of them is shining just for you. Sweet dreams, my love. I'll see you in every good one.",
+              text: "Em ayindhi bangaram? Anni okesari perfect ga undalani ledhu. Konni rojulu bad ga untayi, konni rojulu manalni test chesthayi. Kaani okati gurthupettuko... nuvvu ontariga levu. Nenu unna kadha! Edavalanipisthe edchey, matladalanipisthe call chey. Ninnu navvinche responsibility naadhi. ❤️",
             },
           ];
           var envsEl = $("envs");
@@ -3872,7 +3872,7 @@
         /* ---------- Typewriter letter ---------- */
         (function () {
           var T =
-            "Dear Rupa Likitha,\n\nOn the day you were born, the world became a little softer, a little brighter, and a lot more beautiful. I don't say it enough, but you are the calm in my chaos and the smile I carry through every day.\n\nThank you for your patience, your laughter, and for loving me exactly as I am. Whatever this new year brings, I want to face it right beside you.\n\nHappy 26th birthday, my love. May life be as kind to you as you are to everyone around you.";
+            "Dear Rupa Likitha,\n\nNuvvu naa life loki vachina tharvatha, chaala chinna chinna moments kuda naaku beautiful memories ayipoyayi. Nee navvu, nee maatalu, nee alaka... ivanni naaku chaala special.\n\nNenu prathi sari cheppakapovachu, kaani nuvvu naaku entha important oo maatallo cheppalenu. Nee happiness, nee dreams, nee success... anni naaku naa own happiness laane anipisthayi.\n\nLife lo enni ups and downs vachina, nee pakkana nilabadali, nee tho navvali, nee tho godava padali, malli ninnu bujjaginchali. Ilaane mana chinna world ni beautiful ga build chesukovali.\n\nHappy 26th Birthday, bangaram. ❤️ Nee life lo nuvvu korukunna prathi happiness ravali. And aa happiness lo nenu eppudu oka part ga undali.\n\nI love you, Rupa. More than words can ever say. ❤️";
           var el = $("ltxt"),
             sg = $("lsg"),
             re = $("lre"),
